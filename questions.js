@@ -505,7 +505,7 @@ const questionsData = [
                 ],
                 "correct": 1
             },
-           {
+            {
                 "question": "Какой SQL-оператор используется для сортировки результата?",
                 "options": [
                     "WHERE",
@@ -515,7 +515,6 @@ const questionsData = [
                 ],
                 "correct": 2
             }
-            // Добавьте еще 13 вопросов
         ]
     }
 ];
