@@ -3,517 +3,242 @@ const questionsData = [
         "page": 1,
         "questions": [
             {
-                "question": "Что обозначают двойные ромбы в ER-диаграмме?",
+                "question": "What do double diamonds represent in an ER diagram?",
                 "options": [
-                    "Связывают наборы сущностей с наборами отношений",
-                    "Полное участие сущности в наборе отношений",
-                    "Наборы отношений связаны со слабыми наборами сущностей",
-                    "Ничего из перечисленного"
+                    "They link entity sets to relationship sets",
+                    "Total participation of an entity in a relationship set",
+                    "Relationship sets are linked to weak entity sets",
+                    "None of the mentioned"
                 ],
                 "correct": 2
             },
             {
-                "question": "Направленная линия (->) от набора отношений advisor к наборам сущностей instructor и student указывает на _________ кардинальность:",
+                "question": "Consider a directed line (→) from the relationship set advisor to both entity sets, instructor and student. This indicates cardinality",
                 "options": [
-                    "Один ко многим",
-                    "Один к одному",
-                    "Многие ко многим",
-                    "Многие к одному"
-                ],
-                "correct": 3
-            },
-            {
-                "question": "Если ______, то A -> B имеет тривиальную функциональную зависимость.",
-                "options": [
-                    "B является подмножеством A",
-                    "A является подмножеством B",
-                    "B является подмножеством A'",
-                    "A является подмножеством B'"
-                ],
-                "correct": 0
-            },
-            {
-                "question": "Указание порядка хранения ключевых значений в индексе полезно, когда запросы к таблице содержат ____________:",
-                "options": [
-                    "ORDER BY",
-                    "WHERE",
-                    "GROUP BY",
-                    "HAVING"
-                ],
-                "correct": 0
-            },
-            {
-                "question": "Если каждая ячейка содержит только одно определенное значение, это соответствует какому нормальному виду?",
-                "options": [
-                    "Первая нормальная форма",
-                    "Вторая нормальная форма",
-                    "Третья нормальная форма",
-                    "Форма Бойса-Кодда"
-                ],
-                "correct": 0
-            },
-            {
-                "question": "Если таблица находится в предыдущей нормальной форме, но не каждый ключевой атрибут функционально зависит только от первичного ключа, это:",
-                "options": [
-                    "Первая нормальная форма",
-                    "Вторая нормальная форма",
-                    "Третья нормальная форма",
-                    "Форма Бойса-Кодда"
+                    "One-to-many",
+                    "One-to-one",
+                    "Many to one",
+                    "Many to many",
+                    "Many to two",
+                    "Two to one"
                 ],
                 "correct": 1
             },
             {
-                "question": "Как называются таблицы, которые являются результатом действий, соответствующих определенным правилам и нормальным формам?",
+                "question": "If A→B then A - B has trivial functional dependency.",
                 "options": [
-                    "Нормализация",
-                    "Денормализация",
-                    "Декомпозиция",
-                    "Избыточность"
+                    "A is a subset of A",
+                    "B is not a subset of A",
+                    "A is a subset of B",
+                    "B is a subset of B'",
+                    "B is not the subset of A"
+                ],
+                "correct": 1
+            },
+            {
+                "question": "Specifying the order in which key values are stored in an index is useful when queries referencing the table have",
+                "options": [
+                    "ORDER BY clauses",
+                    "SORT clauses",
+                    "WHERE clauses",
+                    "GROUP BY clauses",
+                    "HAVING clauses",
+                    "IN clauses",
+                    "None of the mentioned"
                 ],
                 "correct": 0
             },
             {
-                "question": "С каким оператором используется предложение HAVING?",
+                "question": "If each cell contains only one definite value, which normal form is it?",
+                "options": [
+                    "First Normal Form",
+                    "Second Normal Form",
+                    "3NF",
+                    "Boyce-Codd Normal Form",
+                    "INF",
+                    "BCNF",
+                    "Third Normal Form"
+                ],
+                "correct": 0
+            },
+            {
+                "question": "If the table has a previous NF and not every key attribute is functionally dependent on the primary key only – is:",
+                "options": [
+                    "BCNF",
+                    "First Normal Form",
+                    "3NF",
+                    "2NF",
+                    "Boyce-Codd Normal Form",
+                    "INF",
+                    "Second Normal Form",
+                    "Third Normal Form"
+                ],
+                "correct": 3
+            },
+            {
+                "question": "What do we call tables that are the result of actions that meet certain established rules and are in certain normal forms?",
+                "options": [
+                    "Fleshing",
+                    "Generalizations",
+                    "Normalization",
+                    "Denormalization",
+                    "Decomposition",
+                    "Redundancy",
+                    "Composition"
+                ],
+                "correct": 2
+            },
+            {
+                "question": "The 'Having' clause is used with",
                 "options": [
                     "GROUP BY",
                     "ORDER BY",
                     "WHERE",
+                    "IN",
+                    "BETWEEN",
                     "DISTINCT"
                 ],
                 "correct": 0
             },
             {
-                "question": "Какие утверждения верны о функции COUNT?",
+                "question": "Which of the following statements are true about the COUNT function",
                 "options": [
-                    "COUNT считает количество строк",
-                    "COUNT(*) учитывает строки с дубликатами и NULL",
-                    "COUNT(DISTINCT) считает уникальные строки",
-                    "COUNT(*) эквивалентно COUNT(ALL)"
+                    "The COUNT function counts the number of rows",
+                    "The COUNT() function counts the number of rows with duplicates and NULL values",
+                    "The COUNT(DISTINCT) function counts the number of distinct rows",
+                    "COUNT() is equivalent to COUNT(ALL)",
+                    "None of the above"
+                ],
+                "correct": [0, 2, 3]
+            },
+            {
+                "question": "Foreign key is one in which the _____ of one relation is referenced in another relation.",
+                "options": [
+                    "Foreign key",
+                    "Primary key",
+                    "Composite key",
+                    "Relationship",
+                    "Check constraint"
                 ],
                 "correct": 1
             },
             {
-                "question": "Внешний ключ — это тот, в котором ______ одной таблицы ссылается на другую таблицу.",
+                "question": "Returns a relation containing all tuples that appear in both of two specified relations.",
                 "options": [
-                    "Внешний ключ",
-                    "Первичный ключ",
-                    "Составной ключ",
-                    "Ссылка"
-                ],
-                "correct": 1
-            },
-            {
-                "question": "Какой оператор возвращает отношение, содержащее кортежи, присутствующие в обоих указанных отношениях?",
-                "options": [
-                    "Пересечение",
-                    "Объединение",
-                    "Разность",
-                    "Соединение"
+                    "Intersection",
+                    "Union",
+                    "Difference",
+                    "Join",
+                    "Selection"
                 ],
                 "correct": 0
             },
             {
-                "question": "Какой оператор возвращает все возможные комбинации кортежей из двух отношений с общими значениями атрибутов?",
+                "question": "Returns a relation containing all possible tuples that are a combination of two tuples, one from each of two specified relations, such that the two tuples contributing to any given result tuple have common values for the common attributes of the two relations (and those common values appear just once, not twice, in that result tuple).",
                 "options": [
-                    "Выборка",
-                    "Деление",
-                    "Проекция",
-                    "Соединение"
+                    "Selection",
+                    "Division",
+                    "Projection",
+                    "Intersection",
+                    "Union",
+                    "Join"
                 ],
-                "correct": 3
+                "correct": 5
             },
             {
-                "question": "Какой тип соединения возвращает строки из обеих таблиц, удовлетворяющие условию, и считается соединением по умолчанию?",
+                "question": "__ is used to return rows from both tables that satisfy the given condition. It is the most widely used join operation and can be considered as a default join-type.",
                 "options": [
-                    "Тета-соединение",
-                    "Внутреннее соединение",
-                    "Экви-соединение",
-                    "Естественное соединение"
+                    "Theta join",
+                    "Inner join",
+                    "Equi join",
+                    "Natural join"
                 ],
                 "correct": 1
             },
             {
-                "question": "Какой оператор используется для добавления ограничения целостности в существующую таблицу?",
+                "question": "To include integrity constraint in an existing relation use:",
                 "options": [
-                    "CREATE TABLE",
-                    "MODIFY TABLE",
-                    "ALTER TABLE",
-                    "AFTER TABLE"
+                    "Create table",
+                    "Modify table",
+                    "Alter table",
+                    "After table"
                 ],
                 "correct": 2
             },
             {
-                "question": "Таблица T_COUNT содержит значения: 1, 2, 3, 32, 1, 7, null, 24, 12, null, 32, null. Каков результат запроса SELECT COUNT(num) FROM t_count?",
+                "question": "A table T_COUNT has 12 number values as: 1, 2, 3, 3, 1, 1, null, 24, 2, 12, null, 32, null. Predict the output of the following: SELECT COUNT(num) FROM t_count;",
                 "options": [
                     "12",
                     "6",
                     "9",
-                    "5"
+                    "5",
+                    "3"
                 ],
                 "correct": 2
-            }
-        ]
-    },
-    {
-        "page": 2,
-        "questions": [
-            {
-                "question": "Какова основная цель нормализации базы данных?",
-                "options": [
-                    "Сократить избыточность данных и повысить целостность",
-                    "Увеличить размер базы данных",
-                    "Ускорить запросы за счет дублирования",
-                    "Добавить больше таблиц"
-                ],
-                "correct": 0
             },
             {
-                "question": "Какой SQL-команда удаляет все строки из таблицы, но сохраняет структуру?",
+                "question": "Which of the following SELECT query returns the department number with maximum salary to an employee, by department?",
                 "options": [
-                    "DELETE FROM table_name",
-                    "DROP TABLE table_name",
-                    "TRUNCATE TABLE table_name",
-                    "REMOVE table_name"
+                    "SELECT department_id, max(salary) FROM employees;",
+                    "SELECT department_id, max(salary) FROM employees GROUP BY department_id;",
+                    "SELECT salary FROM employees GROUP BY department_id;",
+                    "SELECT max(salary) FROM employees;",
+                    "SELECT DISTINCT department_id, max(salary) FROM employees GROUP BY department_id;",
+                    "SELECT department_id, min(salary) FROM employees GROUP BY department_id;",
+                    "SELECT department_id FROM employees GROUP BY department_id;",
+                    "SELECT max(salary) FROM employees GROUP BY salary;",
+                    "None of the mentioned"
+                ],
+                "correct": 1
+            },
+            {
+                "question": "Which of the following is correct?",
+                "options": [
+                    "Select * from tblA A, tblB B on(A.colA = B.colB)",
+                    "Select * from tblA A, tblB B Where A.colA = B.colB",
+                    "Select * from tblA A natural join tblB B on(A.colA = B.colB)",
+                    "Select * from tblA A join tblB B on A.colA = B.colB",
+                    "Select * from tblA A, tblB B on A.colA = B.colB",
+                    "Select * from tblA, tblB on A.colA = B.colB"
+                ],
+                "correct": 3
+            },
+            {
+                "question": "Double Rectangle represent",
+                "options": [
+                    "Derived attributes",
+                    "Multi-valued Attributes",
+                    "Weak entity sets",
+                    "Total participation of an entity in a relationship set"
                 ],
                 "correct": 2
-            }
-            // Добавьте еще 13 вопросов из Sample Final Exam 2 (вопросы 3–15)
-        ]
-    },
-    {
-        "page": 3,
-        "questions": [
+            },
             {
-                "question": "Какое предложение используется для фильтрации строк после агрегации в SQL?",
+                "question": "Which statement is used to get all data from the student table whose name starts with ‘L’?",
                 "options": [
-                    "WHERE",
-                    "HAVING",
-                    "GROUP BY",
-                    "ORDER BY"
+                    "SELECT * FROM student WHERE name LIKE '%L%'",
+                    "SELECT * FROM student WHERE name LIKE 'L%'",
+                    "SELECT * FROM student WHERE name LIKE 'L*%'",
+                    "SELECT * FROM student WHERE name LIKE '%L'",
+                    "SELECT * FROM student WHERE name LIKE 'L%'",
+                    "SELECT * FROM student WHERE name LIKE '%L%L%'",
+                    "SELECT * FROM student WHERE name LIKE '%L%'"
                 ],
                 "correct": 1
             },
             {
-                "question": "Что такое кандидатский ключ в реляционной базе данных?",
-                "options": [
-                    "Атрибут, уникально идентифицирующий кортеж",
-                    "Внешний ключ, ссылающийся на другую таблицу",
-                    "Атрибут, используемый в JOIN",
-                    "Ключ, содержащий NULL"
-                ],
-                "correct": 0
-            }
-            // Добавьте еще 13 вопросов из Sample Final Exam 2 (вопросы 16–20) и Sample Final Exam 3
-        ]
-    },
-    {
-        "page": 4,
-        "questions": [
-            {
-                "question": "Какой оператор реляционной алгебры возвращает кортежи, присутствующие в обоих отношениях?",
-                "options": [
-                    "Объединение",
-                    "Пересечение",
-                    "Разность",
-                    "Соединение"
-                ],
-                "correct": 1
-            },
-            {
-                "question": "Какую SQL-команду вы используете для добавления нового столбца в существующую таблицу?",
-                "options": [
-                    "MODIFY TABLE",
-                    "ALTER TABLE ADD COLUMN",
-                    "UPDATE TABLE",
-                    "CREATE COLUMN"
-                ],
-                "correct": 1
-            }
-            // Добавьте еще 13 вопросов из Sample Final Exam 3
-        ]
-    },
-    {
-        "page": 5,
-        "questions": [
-            {
-                "question": "Какая команда в транзакциях SQL сохраняет изменения навсегда?",
+                "question": "What command is used to save changes invoked by a transaction to the database?",
                 "options": [
                     "ROLLBACK",
+                    "START TRANSACTION",
+                    "SAVE",
                     "COMMIT",
-                    "SAVEPOINT",
-                    "START TRANSACTION"
-                ],
-                "correct": 1
-            },
-            {
-                "question": "Что лучше всего описывает слабую сущность в ER-диаграмме?",
-                "options": [
-                    "Сущность, зависящая от сильной сущности",
-                    "Сущность с уникальным первичным ключом",
-                    "Сущность без связей",
-                    "Сущность с производными атрибутами"
-                ],
-                "correct": 0
-            }
-            // Добавьте еще 13 вопросов из Sample Final Exam 3 и 4
-        ]
-    },
-    {
-        "page": 6,
-        "questions": [
-            {
-                "question": "Что делает SQL-ключевое слово DISTINCT?",
-                "options": [
-                    "Удаляет дублирующиеся строки из результата",
-                    "Ограничивает количество строк",
-                    "Сортирует результат",
-                    "Фильтрует строки по условию"
-                ],
-                "correct": 0
-            },
-            {
-                "question": "Какая команда используется для создания пользовательской функции в SQL?",
-                "options": [
-                    "CREATE PROCEDURE",
-                    "CREATE FUNCTION",
-                    "DEFINE FUNCTION",
-                    "MAKE FUNCTION"
-                ],
-                "correct": 1
-            }
-            // Добавьте еще 13 вопросов из Sample Final Exam 4
-        ]
-    },
-    {
-        "page": 7,
-        "questions": [
-            {
-                "question": "Какое ограничение обеспечивает уникальность значений в столбце, но допускает NULL?",
-                "options": [
-                    "PRIMARY KEY",
-                    "UNIQUE",
-                    "NOT NULL",
-                    "FOREIGN KEY"
-                ],
-                "correct": 1
-            },
-            {
-                "question": "В какой нормальной форме таблица, если в ней нет транзитивных зависимостей?",
-                "options": [
-                    "Первая нормальная форма",
-                    "Вторая нормальная форма",
-                    "Третья нормальная форма",
-                    "Форма Бойса-Кодда"
-                ],
-                "correct": 2
-            }
-            // Добавьте еще 13 вопросов, повторяя или адаптируя из тестов
-        ]
-    },
-    {
-        "page": 8,
-        "questions": [
-            {
-                "question": "Какой эффект имеет предложение ORDER BY в SQL?",
-                "options": [
-                    "Фильтрует строки по условиям",
-                    "Группирует строки в наборы",
-                    "Сортирует результат по столбцам",
-                    "Ограничивает количество строк"
-                ],
-                "correct": 2
-            },
-            {
-                "question": "Какое ключевое слово SQL используется для переименования таблицы?",
-                "options": [
-                    "RENAME TABLE",
-                    "ALTER TABLE RENAME TO",
-                    "MODIFY TABLE NAME",
-                    "UPDATE TABLE NAME"
-                ],
-                "correct": 1
-            }
-            // Добавьте еще 13 вопросов
-        ]
-    },
-    {
-        "page": 9,
-        "questions": [
-            {
-                "question": "Что такое база данных?",
-                "options": [
-                    "Организованный набор данных для управления",
-                    "Программа для создания таблиц",
-                    "Набор случайных данных",
-                    "Файл с SQL-запросами"
-                ],
-                "correct": 0
-            },
-            {
-                "question": "Что такое сущность в базе данных?",
-                "options": [
-                    "Реальный объект или концепция",
-                    "Столбец в таблице",
-                    "SQL-запрос",
-                    "Индекс таблицы"
-                ],
-                "correct": 0
-            }
-            // Добавьте еще 13 вопросов на основе справочника
-        ]
-    },
-    {
-        "page": 10,
-        "questions": [
-            {
-                "question": "Что обозначает прямоугольник в ER-диаграмме?",
-                "options": [
-                    "Набор сущностей",
-                    "Атрибут",
-                    "Связь",
-                    "Слабая сущность"
-                ],
-                "correct": 0
-            },
-            {
-                "question": "Что такое первичный ключ?",
-                "options": [
-                    "Уникально идентифицирует кортеж",
-                    "Ссылается на другую таблицу",
-                    "Содержит NULL",
-                    "Используется только в JOIN"
-                ],
-                "correct": 0
-            }
-            // Добавьте еще 13 вопросов
-        ]
-    },
-    {
-        "page": 11,
-        "questions": [
-            {
-                "question": "Что такое нормализация?",
-                "options": [
-                    "Устранение избыточности и аномалий",
-                    "Добавление дубликатов",
-                    "Создание новых таблиц",
-                    "Удаление данных"
-                ],
-                "correct": 0
-            },
-            {
-                "question": "Что означает 1NF?",
-                "options": [
-                    "Атрибуты содержат атомарные значения",
-                    "Нет частичных зависимостей",
-                    "Нет транзитивных зависимостей",
-                    "Каждый детерминант — ключ"
-                ],
-                "correct": 0
-            }
-            // Добавьте еще 13 вопросов
-        ]
-    },
-    {
-        "page": 12,
-        "questions": [
-            {
-                "question": "Что такое функциональная зависимость A → B?",
-                "options": [
-                    "B зависит от A",
-                    "A зависит от B",
-                    "A и B независимы",
-                    "B содержит NULL"
-                ],
-                "correct": 0
-            },
-            {
-                "question": "Какой оператор SQL используется для выборки данных?",
-                "options": [
-                    "SELECT",
-                    "INSERT",
                     "UPDATE",
-                    "DELETE"
+                    "SAVEPOINT",
+                    "INSERT",
+                    "SET TRANSACTION"
                 ],
-                "correct": 0
-            }
-            // Добавьте еще 13 вопросов
-        ]
-    },
-    {
-        "page": 13,
-        "questions": [
-            {
-                "question": "Что делает INNER JOIN?",
-                "options": [
-                    "Возвращает строки с совпадениями в обеих таблицах",
-                    "Возвращает все строки из левой таблицы",
-                    "Возвращает все строки из правой таблицы",
-                    "Возвращает все строки из обеих таблиц"
-                ],
-                "correct": 0
-            },
-            {
-                "question": "Что такое транзакция в SQL?",
-                "options": [
-                    "Единичный запрос",
-                    "Группа операций как единое целое",
-                    "Резервная копия",
-                    "Индекс таблицы"
-                ],
-                "correct": 1
-            }
-            // Добавьте еще 13 вопросов
-        ]
-    },
-    {
-        "page": 14,
-        "questions": [
-            {
-                "question": "Что такое индекс в базе данных?",
-                "options": [
-                    "Ускоряет выборку данных",
-                    "Шифрует данные",
-                    "Создает резервные копии",
-                    "Ограничивает доступ"
-                ],
-                "correct": 0
-            },
-            {
-                "question": "Что делает оператор реляционной алгебры Selection?",
-                "options": [
-                    "Выбирает кортежи по условию",
-                    "Выбирает столбцы",
-                    "Объединяет отношения",
-                    "Возвращает пересечение"
-                ],
-                "correct": 0
-            }
-            // Добавьте еще 13 вопросов
-        ]
-    },
-    {
-        "page": 15,
-        "questions": [
-            {
-                "question": "Что такое внешний ключ?",
-                "options": [
-                    "Уникально идентифицирует строки",
-                    "Ссылается на первичный ключ другой таблицы",
-                    "Содержит дубликаты",
-                    "Используется для шифрования"
-                ],
-                "correct": 1
-            },
-            {
-                "question": "Какой SQL-оператор используется для сортировки результата?",
-                "options": [
-                    "WHERE",
-                    "GROUP BY",
-                    "ORDER BY",
-                    "HAVING"
-                ],
-                "correct": 2
+                "correct": 3
             }
         ]
     }
