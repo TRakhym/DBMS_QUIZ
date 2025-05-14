@@ -1,156 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Quiz Test</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Тесты</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-gray-100 text-gray-800">
-
-  <div class="container mx-auto p-4">
-    <h1 class="text-3xl font-bold mb-6 text-center">English Quiz</h1>
-
-    <div id="quiz-container" class="grid gap-4"></div>
-
-    <div id="pagination" class="flex justify-center mt-6 space-x-2">
-      <!-- Pagination buttons will appear here -->
-    </div>
+<body>
+  <div class="container">
+    <h1>Онлайн тестирование</h1>
+    <div id="questions-container"></div>
+    <div id="pagination" class="pagination"></div>
   </div>
-
-  <script>
-    const questions = [
-      {
-        question: "What is the past tense of 'go'?",
-        answers: ["goes", "going", "went", "goed"],
-        correct: 2
-      },
-      {
-        question: "Choose the correct article: ___ apple",
-        answers: ["a", "an", "the", "no article"],
-        correct: 1
-      },
-      {
-        question: "What is the plural of 'child'?",
-        answers: ["childs", "childes", "children", "chields"],
-        correct: 2
-      },
-      {
-        question: "She ___ to school every day.",
-        answers: ["go", "goes", "going", "gone"],
-        correct: 1
-      },
-      {
-        question: "Which is a verb?",
-        answers: ["beautiful", "quick", "run", "blue"],
-        correct: 2
-      },
-      {
-        question: "What’s the opposite of 'hot'?",
-        answers: ["warm", "cold", "cool", "boiling"],
-        correct: 1
-      },
-      {
-        question: "Complete: I ___ pizza yesterday.",
-        answers: ["eat", "ate", "eated", "eats"],
-        correct: 1
-      },
-      {
-        question: "Which is an adjective?",
-        answers: ["quickly", "jump", "green", "loudly"],
-        correct: 2
-      },
-      {
-        question: "What is the past of 'have'?",
-        answers: ["has", "haved", "had", "having"],
-        correct: 2
-      },
-      {
-        question: "Choose the correct sentence.",
-        answers: ["He go to work.", "He goes to work.", "He going to work.", "He gone to work."],
-        correct: 1
-      },
-      {
-        question: "I have ___ apple.",
-        answers: ["a", "an", "the", "some"],
-        correct: 1
-      },
-      {
-        question: "Which one is a noun?",
-        answers: ["run", "happy", "chair", "quickly"],
-        correct: 2
-      },
-      {
-        question: "Complete: They ___ playing.",
-        answers: ["is", "are", "was", "be"],
-        correct: 1
-      },
-      {
-        question: "What is the opposite of 'big'?",
-        answers: ["huge", "giant", "small", "wide"],
-        correct: 2
-      },
-      {
-        question: "Choose the correct form: She ___ a doctor.",
-        answers: ["am", "are", "is", "be"],
-        correct: 2
-      }
-    ];
-
-    const quizContainer = document.getElementById("quiz-container");
-    const pagination = document.getElementById("pagination");
-    let currentQuestion = 0;
-
-    function renderQuestion(index) {
-      quizContainer.innerHTML = "";
-      const q = questions[index];
-      const card = document.createElement("div");
-      card.className = "bg-white shadow rounded-xl p-6";
-
-      const questionEl = document.createElement("h2");
-      questionEl.className = "text-xl font-semibold mb-4";
-      questionEl.textContent = `${index + 1}. ${q.question}`;
-      card.appendChild(questionEl);
-
-      q.answers.forEach((ans, i) => {
-        const btn = document.createElement("button");
-        btn.textContent = ans;
-        btn.className = "block w-full text-left px-4 py-2 mb-2 border rounded-md bg-gray-100 hover:bg-gray-200 transition";
-        btn.addEventListener("click", () => {
-          if (btn.dataset.answered) return;
-          btn.dataset.answered = true;
-          if (i === q.correct) {
-            btn.classList.add("bg-green-300", "border-green-500");
-          } else {
-            btn.classList.add("bg-red-300", "border-red-500");
-          }
-        });
-        card.appendChild(btn);
-      });
-
-      quizContainer.appendChild(card);
-    }
-
-    function renderPagination() {
-      pagination.innerHTML = "";
-      for (let i = 0; i < questions.length; i++) {
-        const btn = document.createElement("button");
-        btn.textContent = i + 1;
-        btn.className = `px-3 py-1 rounded border ${
-          i === currentQuestion
-            ? "bg-blue-500 text-white"
-            : "bg-white hover:bg-blue-100"
-        }`;
-        btn.addEventListener("click", () => {
-          currentQuestion = i;
-          renderQuestion(i);
-          renderPagination();
-        });
-        pagination.appendChild(btn);
-      }
-    }
-
-    renderQuestion(currentQuestion);
-    renderPagination();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
