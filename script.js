@@ -1,6 +1,11 @@
 let questionsData = [];
 let currentPage = 1;
 
+document.addEventListener("DOMContentLoaded", () => {
+  renderPagination();
+  renderQuestions(currentPage);
+});
+
 fetch("questions.json")
   .then(res => res.json())
   .then(data => {
