@@ -6,14 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderQuestions(currentPage);
 });
 
-fetch("questions.json")
-  .then(res => res.json())
-  .then(data => {
-    questionsData = data;
-    renderPagination();
-    renderQuestions(currentPage);
-  });
-
 function renderPagination() {
   const pagination = document.getElementById("pagination");
   pagination.innerHTML = "";
