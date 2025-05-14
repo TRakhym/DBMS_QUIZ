@@ -505,7 +505,7 @@ const questionsData = [
                 ],
                 "correct": 1
             },
-           32            {
+           {
                 "question": "Какой SQL-оператор используется для сортировки результата?",
                 "options": [
                     "WHERE",
