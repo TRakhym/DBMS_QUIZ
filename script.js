@@ -24,13 +24,17 @@ function renderPagination() {
 
 function renderQuestions(page) {
   const container = document.getElementById("questions-container");
+  const congrats = document.getElementById("congrats-message");
   container.innerHTML = "";
-  const pageData = questionsData.find(p => p.page === page);
+  congrats.classList.add("hidden");
 
+  const pageData = questionsData.find(p => p.page === page);
   if (!pageData) {
     container.innerHTML = "<p>Нет данных для этой страницы.</p>";
     return;
   }
+
+  let answeredCount = 0;
 
   pageData.questions.forEach((q, index) => {
     const card = document.createElement("div");
@@ -47,12 +51,19 @@ function renderQuestions(page) {
       btn.textContent = opt;
       btn.onclick = () => {
         const buttons = optionsEl.querySelectorAll("button");
+        if ([...buttons].some(b => b.disabled)) return;
+
         buttons.forEach(b => b.disabled = true);
         if (i === q.correct) {
           btn.classList.add("correct");
         } else {
           btn.classList.add("incorrect");
           buttons[q.correct].classList.add("correct");
+        }
+
+        answeredCount++;
+        if (answeredCount === pageData.questions.length) {
+          showCongratulations();
         }
       };
       optionsEl.appendChild(btn);
@@ -62,4 +73,10 @@ function renderQuestions(page) {
     card.appendChild(optionsEl);
     container.appendChild(card);
   });
+}
+
+function showCongratulations() {
+  const congrats = document.getElementById("congrats-message");
+  congrats.classList.remove("hidden");
+  startSnow();
 }
