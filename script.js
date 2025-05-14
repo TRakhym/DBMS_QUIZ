@@ -1,4 +1,3 @@
-let questionsData = [];
 let currentPage = 1;
 
 document.addEventListener("DOMContentLoaded", () => {
